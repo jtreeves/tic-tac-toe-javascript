@@ -1,7 +1,7 @@
-import { createTitle } from './createTitle'
-import { createMessage } from './createMessage'
-import { createBoard } from './createBoard'
-import { createReset } from './createReset'
+import { createTitle } from './createTitle.js'
+import { createMessage } from './createMessage.js'
+import { createBoard } from './createBoard.js'
+import { createReset } from './createReset.js'
 
 export function createScreen() {
     const body = document.querySelector('body')

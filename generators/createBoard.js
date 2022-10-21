@@ -1,13 +1,13 @@
-import { getPoints } from '../accessors/getPoints'
-import { createCell } from './createCell'
+import { getPoints } from '../accessors/getPoints.js'
+import { createCell } from './createCell.js'
 
 export function createBoard() {
     const section = document.createElement('section')
     const points = getPoints()
-    
+
     points.forEach(point => {
-        const id = 'square-' + points.indexOf(point)
-        const cell = createCell(id)
+        const position = points.indexOf(point)
+        const cell = createCell(position)
         section.appendChild(cell)
     })
 

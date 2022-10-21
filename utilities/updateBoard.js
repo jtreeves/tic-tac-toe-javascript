@@ -1,9 +1,12 @@
-export function updateBoard(board) {
+import { getPoints } from '../accessors/getPoints.js'
+
+export function updateBoard() {
+    const points = getPoints()
     const squares = document.querySelectorAll('article')
 
-    for (let index in board) {
-        if (board[index] === 1) squares[index].innerText = 'X'
-        if (board[index] === -1) squares[index].innerText = 'O'
-        if (!board[index]) squares[index].innerText = ''
+    for (let index in points) {
+        if (points[index] === 1) squares[index].innerText = 'X'
+        if (points[index] === -1) squares[index].innerText = 'O'
+        if (!points[index]) squares[index].innerText = ''
     }
 }
