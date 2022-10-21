@@ -1,7 +1,7 @@
 import { getPoints } from '../accessors/getPoints.js'
 import { winningCombos } from '../data/winningCombos.js'
 
-export function findEmptyIndex(player) {
+export function findEmptyIndexInNearlyFullCombo(player) {
     const points = getPoints()
     const multiple = player === 'X' ? 1 : -1
     let foundIndex = -1
