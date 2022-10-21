@@ -1,19 +1,10 @@
-import { getPoints } from '../accessors/getPoints.js'
-import { getTurn } from '../accessors/getTurn.js'
+import { handleTurn } from '../handlers/handleTurn.js'
 
-export function createCell(position) {
+export function createCell(id) {
     const article = document.createElement('article')
-    const points = getPoints()
-    const turn = getTurn()
-    const id = 'square-' + position
-
-    const handleClick = () => {
-        points[position] = turn
-        localStorage.setItem('points', points)
-    }
 
     article.id = id
-    article.addEventListener('click', handleClick)
+    article.addEventListener('click', handleTurn)
 
     return article
 }

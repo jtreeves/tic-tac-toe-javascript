@@ -1,11 +1,12 @@
 import { getTurn } from '../accessors/getTurn.js'
+import { setTurn } from '../storers/setTurn.js'
 
-export function switchPlayerTurn(winner) {
+export function updateTurn(winner) {
     const turn = getTurn()
 
     if (!winner) {
         const newTurn = turn * -1
-        
-        localStorage.setItem('turn', newTurn)
+
+        setTurn(newTurn)
     }
 }

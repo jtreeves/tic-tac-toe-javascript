@@ -5,9 +5,10 @@ export function createBoard() {
     const section = document.createElement('section')
     const points = getPoints()
 
-    points.forEach(point => {
-        const position = points.indexOf(point)
-        const cell = createCell(position)
+    points.forEach((_, index) => {
+        const id = 'square-' + index
+        const cell = createCell(id)
+
         section.appendChild(cell)
     })
 
