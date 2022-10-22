@@ -1,9 +1,22 @@
 import { getTurn } from '../accessors/getTurn.js'
+import { getPlayer } from '../accessors/getPlayer.js'
+import { yourTurnMessage } from '../data/yourTurnMessage.js'
+import { waitTurnMessage } from '../data/waitTurnMessage.js'
 
 export function updateMessage(winner, tie) {
     const turn = getTurn()
-    const msg = document.querySelector('p')
-    msg.innerText = `It's ${turn > 0 ? 'X' : 'O'}'s turn`
-    if (winner) msg.innerText = `${turn > 0 ? 'X' : 'O'} wins`
-    if (tie) msg.innerText = `Tie game`
+    const player = getPlayer()
+    const message = document.querySelector('p')
+
+    if (winner) {
+        message.textContent = `${turn > 0 ? 'X' : 'O'} wins!`
+    } else if (tie) {
+        message.textContent = 'Tie game!'
+    } else {
+        if (player === turn) {
+            message.textContent = yourTurnMessage
+        } else {
+            message.textContent = waitTurnMessage
+        }
+    }
 }
