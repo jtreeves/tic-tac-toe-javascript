@@ -2,11 +2,11 @@ import getPlayer from '../accessors/getPlayer.js'
 import selectBestCell from './selectBestCell.js'
 import getPoints from '../accessors/getPoints.js'
 import setPoints from '../storers/setPoints.js'
-import checkIfTie from './checkIfTie.js'
-import checkIfWinner from './checkIfWinner.js'
 import updateTurn from '../mutators/updateTurn.js'
 import updateMessage from '../mutators/updateMessage.js'
 import extractIndexFromId from './extractIndexFromId.js'
+import updateTie from '../mutators/updateTie.js'
+import updateWinner from '../mutators/updateWinner.js'
 
 function playOpponent() {
     const player = getPlayer()
@@ -19,10 +19,10 @@ function playOpponent() {
     const points = getPoints()
     points[index] = opponent
     setPoints(points)
-    const tie = checkIfTie()
-    const winner = checkIfWinner()
-    updateTurn(winner)
-    updateMessage(winner, tie)
+    updateTie()
+    updateWinner()
+    updateTurn()
+    updateMessage()
 }
 
 export default playOpponent
