@@ -8,8 +8,6 @@ import getPlayer from '../accessors/getPlayer.js'
 import playOpponent from '../utilities/playOpponent.js'
 import updateTie from '../mutators/updateTie.js'
 import updateWinner from '../mutators/updateWinner.js'
-import getWinner from '../accessors/getWinner.js'
-import getTie from '../accessors/getTie.js'
 
 function handleTurn(event) {
     const target = event.target
@@ -30,13 +28,9 @@ function handleTurn(event) {
         updateWinner()
         updateTurn()
         updateMessage()
-        const winner = getWinner()
-        const tie = getTie()
-        if (!winner && !tie) {
-            setTimeout(() => {
-                playOpponent()
-            }, 1000)
-        }
+        setTimeout(() => {
+            playOpponent()
+        }, 1000)
     }
 }
 

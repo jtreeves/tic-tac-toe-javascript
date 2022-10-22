@@ -2,7 +2,7 @@ import handleOptionX from '../handlers/handleOptionX.js'
 import handleOptionO from '../handlers/handleOptionO.js'
 
 function createOptionButtons() {
-    const container = document.createElement('article')
+    const container = document.createElement('div')
     const optionX = document.createElement('button')
     const optionO = document.createElement('button')
 

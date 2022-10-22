@@ -8,14 +8,14 @@ import playOpponent from '../utilities/playOpponent.js'
 function updateScreenWithGame() {
     const body = document.querySelector('body')
     const p = document.querySelector('p')
-    const article = document.querySelector('article')
+    const div = document.querySelector('div')
     const board = createBoard()
     const resetButton = createResetButton()
     const player = getPlayer()
     const message = player === 1 ? yourTurnMessage : waitTurnMessage
 
     p.textContent = message
-    article.remove()
+    div.remove()
     body.appendChild(board)
     body.appendChild(resetButton)
 
