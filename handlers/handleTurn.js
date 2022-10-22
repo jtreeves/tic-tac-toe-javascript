@@ -5,9 +5,9 @@ import { updateTurn } from '../mutators/updateTurn.js'
 import { updateMessage } from '../mutators/updateMessage.js'
 import { checkIfTie } from '../utilities/checkIfTie.js'
 import { checkIfWinner } from '../utilities/checkIfWinner.js'
-import { selectBestCell } from '../utilities/selectBestCell.js'
 import { extractIndexFromId } from '../utilities/extractIndexFromId.js'
 import { getPlayer } from '../accessors/getPlayer.js'
+import { playOpponent } from '../utilities/playOpponent.js'
 
 export function handleTurn(event) {
     const target = event.target
@@ -28,6 +28,6 @@ export function handleTurn(event) {
         const winner = checkIfWinner()
         updateTurn(winner)
         updateMessage(winner, tie)
-        console.log(selectBestCell('O'))
+        playOpponent()
     }
 }
