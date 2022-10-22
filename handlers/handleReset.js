@@ -1,9 +1,10 @@
-import { clearBoard } from '../mutators/clearBoard.js'
-import { clearMessage } from '../mutators/clearMessage.js'
+import { updateScreenWithOptions } from '../mutators/updateScreenWithOptions.js'
 import { setInitialStates } from '../storers/setInitialStates.js'
 
 export function handleReset() {
-    clearBoard()
-    clearMessage()
+    const board = document.querySelector('section')
+    
+    board.remove()
+    updateScreenWithOptions()
     setInitialStates()
 }
