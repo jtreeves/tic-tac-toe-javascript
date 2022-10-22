@@ -7,17 +7,19 @@ import { checkIfTie } from '../utilities/checkIfTie.js'
 import { checkIfWinner } from '../utilities/checkIfWinner.js'
 import { selectBestCell } from '../utilities/selectBestCell.js'
 import { extractIndexFromId } from '../utilities/extractIndexFromId.js'
+import { getPlayer } from '../accessors/getPlayer.js'
 
 export function handleTurn(event) {
     const target = event.target
+    const player = getPlayer()
+    const turn = getTurn()
 
-    if (target.textContent !== '') {
+    if (target.textContent !== '' || player !== turn) {
         return
     } else {
         const id = target.id
         const index = extractIndexFromId(id)
         const points = getPoints()
-        const turn = getTurn()
         const text = turn === 1 ? 'X' : 'O'
         target.textContent = text
         points[index] = turn
