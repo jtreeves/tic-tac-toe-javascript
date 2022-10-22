@@ -1,6 +1,6 @@
-import { getPoints } from '../accessors/getPoints.js'
+import getPoints from '../accessors/getPoints.js'
 
-export function checkIfTie() {
+function checkIfTie() {
     const points = getPoints()
 
     if (!points.includes(0)) {
@@ -9,3 +9,5 @@ export function checkIfTie() {
         return false
     }
 }
+
+export default checkIfTie

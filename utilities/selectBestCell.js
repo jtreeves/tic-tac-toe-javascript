@@ -1,7 +1,7 @@
-import { findEmptyIndexInNearlyFullCombo } from './findEmptyIndexInNearlyFullCombo.js'
-import { selectWinBlockOrRandom } from './selectWinBlockOrRandom.js'
+import findEmptyIndexInNearlyFullCombo from './findEmptyIndexInNearlyFullCombo.js'
+import selectWinBlockOrRandom from './selectWinBlockOrRandom.js'
 
-export function selectBestCell(computer) {
+function selectBestCell(computer) {
     const xEmpty = findEmptyIndexInNearlyFullCombo('X')
     const oEmpty = findEmptyIndexInNearlyFullCombo('O')
 
@@ -11,3 +11,5 @@ export function selectBestCell(computer) {
         return selectWinBlockOrRandom(oEmpty, xEmpty)
     }
 }
+
+export default selectBestCell

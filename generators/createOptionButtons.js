@@ -1,7 +1,7 @@
-import { handleOptionX } from '../handlers/handleOptionX.js'
-import { handleOptionO } from '../handlers/handleOptionO.js'
+import handleOptionX from '../handlers/handleOptionX.js'
+import handleOptionO from '../handlers/handleOptionO.js'
 
-export function createOptionButtons() {
+function createOptionButtons() {
     const container = document.createElement('article')
     const optionX = document.createElement('button')
     const optionO = document.createElement('button')
@@ -17,3 +17,5 @@ export function createOptionButtons() {
 
     return container
 }
+
+export default createOptionButtons

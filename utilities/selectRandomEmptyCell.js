@@ -1,4 +1,4 @@
-export function selectRandomEmptyCell() {
+function selectRandomEmptyCell() {
     const cells = document.querySelectorAll('article')
     const emptyCells = []
     
@@ -14,3 +14,5 @@ export function selectRandomEmptyCell() {
 
     return randomCell
 }
+
+export default selectRandomEmptyCell

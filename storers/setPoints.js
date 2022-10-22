@@ -1,7 +1,9 @@
-import { setValue } from './setValue.js'
+import setValue from './setValue.js'
 
-export function setPoints(newPoints) {
+function setPoints(newPoints) {
     const stringPoints = newPoints.join(',')
-    
+
     setValue('points', stringPoints)
 }
+
+export default setPoints

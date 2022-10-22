@@ -1,1 +1,3 @@
-export const waitTurnMessage = 'Wait your turn...'
+const waitTurnMessage = 'Wait your turn...'
+
+export default waitTurnMessage

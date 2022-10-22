@@ -1,7 +1,9 @@
-import { createInitialScreen } from './generators/createInitialScreen.js'
-import { setInitialStates } from './storers/setInitialStates.js'
+import createInitialScreen from './generators/createInitialScreen.js'
+import setInitialStates from './storers/setInitialStates.js'
 
-export function app() {
+function app() {
     createInitialScreen()
     setInitialStates()
 }
+
+export default app

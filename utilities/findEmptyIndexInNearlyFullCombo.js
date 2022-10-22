@@ -1,7 +1,7 @@
-import { getPoints } from '../accessors/getPoints.js'
-import { winningCombos } from '../data/winningCombos.js'
+import getPoints from '../accessors/getPoints.js'
+import winningCombos from '../data/winningCombos.js'
 
-export function findEmptyIndexInNearlyFullCombo(computer) {
+function findEmptyIndexInNearlyFullCombo(computer) {
     const points = getPoints()
     const multiple = computer === 'X' ? 1 : -1
     let foundIndex = -1
@@ -20,3 +20,5 @@ export function findEmptyIndexInNearlyFullCombo(computer) {
 
     return foundIndex
 }
+
+export default findEmptyIndexInNearlyFullCombo

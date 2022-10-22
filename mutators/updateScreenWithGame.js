@@ -1,11 +1,11 @@
-import { getPlayer } from '../accessors/getPlayer.js'
-import { waitTurnMessage } from '../data/waitTurnMessage.js'
-import { yourTurnMessage } from '../data/yourTurnMessage.js'
-import { createBoard } from '../generators/createBoard.js'
-import { createResetButton } from '../generators/createResetButton.js'
-import { playOpponent } from '../utilities/playOpponent.js'
+import getPlayer from '../accessors/getPlayer.js'
+import waitTurnMessage from '../data/waitTurnMessage.js'
+import yourTurnMessage from '../data/yourTurnMessage.js'
+import createBoard from '../generators/createBoard.js'
+import createResetButton from '../generators/createResetButton.js'
+import playOpponent from '../utilities/playOpponent.js'
 
-export function updateScreenWithGame() {
+function updateScreenWithGame() {
     const body = document.querySelector('body')
     const p = document.querySelector('p')
     const article = document.querySelector('article')
@@ -25,3 +25,5 @@ export function updateScreenWithGame() {
         }, 1000)
     }
 }
+
+export default updateScreenWithGame

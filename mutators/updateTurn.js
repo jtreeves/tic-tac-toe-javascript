@@ -1,7 +1,7 @@
-import { getTurn } from '../accessors/getTurn.js'
-import { setTurn } from '../storers/setTurn.js'
+import getTurn from '../accessors/getTurn.js'
+import setTurn from '../storers/setTurn.js'
 
-export function updateTurn(winner) {
+function updateTurn(winner) {
     const turn = getTurn()
 
     if (!winner) {
@@ -10,3 +10,5 @@ export function updateTurn(winner) {
         setTurn(newTurn)
     }
 }
+
+export default updateTurn

@@ -1,6 +1,6 @@
-import { handleTurn } from '../handlers/handleTurn.js'
+import handleTurn from '../handlers/handleTurn.js'
 
-export function createCell(id) {
+function createCell(id) {
     const article = document.createElement('article')
 
     article.id = id
@@ -8,3 +8,5 @@ export function createCell(id) {
 
     return article
 }
+
+export default createCell

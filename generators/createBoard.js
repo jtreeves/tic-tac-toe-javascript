@@ -1,7 +1,7 @@
-import { getPoints } from '../accessors/getPoints.js'
-import { createCell } from './createCell.js'
+import getPoints from '../accessors/getPoints.js'
+import createCell from './createCell.js'
 
-export function createBoard() {
+function createBoard() {
     const section = document.createElement('section')
     const points = getPoints()
 
@@ -14,3 +14,5 @@ export function createBoard() {
 
     return section
 }
+
+export default createBoard

@@ -1,8 +1,8 @@
-import { createTitle } from './createTitle.js'
-import { createMessage } from './createMessage.js'
-import { createStartButton } from './createStartButton.js'
+import createTitle from './createTitle.js'
+import createMessage from './createMessage.js'
+import createStartButton from './createStartButton.js'
 
-export function createInitialScreen() {
+function createInitialScreen() {
     const body = document.querySelector('body')
     const h1 = createTitle()
     const p = createMessage()
@@ -12,3 +12,5 @@ export function createInitialScreen() {
     body.appendChild(p)
     body.appendChild(button)
 }
+
+export default createInitialScreen

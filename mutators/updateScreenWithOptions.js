@@ -1,6 +1,6 @@
-import { createOptionButtons } from '../generators/createOptionButtons.js'
+import createOptionButtons from '../generators/createOptionButtons.js'
 
-export function updateScreenWithOptions() {
+function updateScreenWithOptions() {
     const body = document.querySelector('body')
     const p = document.querySelector('p')
     const button = document.querySelector('button')
@@ -10,3 +10,5 @@ export function updateScreenWithOptions() {
     button.remove()
     body.appendChild(article)
 }
+
+export default updateScreenWithOptions

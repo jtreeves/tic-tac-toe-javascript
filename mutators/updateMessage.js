@@ -1,9 +1,9 @@
-import { getTurn } from '../accessors/getTurn.js'
-import { getPlayer } from '../accessors/getPlayer.js'
-import { yourTurnMessage } from '../data/yourTurnMessage.js'
-import { waitTurnMessage } from '../data/waitTurnMessage.js'
+import getTurn from '../accessors/getTurn.js'
+import getPlayer from '../accessors/getPlayer.js'
+import yourTurnMessage from '../data/yourTurnMessage.js'
+import waitTurnMessage from '../data/waitTurnMessage.js'
 
-export function updateMessage(winner, tie) {
+function updateMessage(winner, tie) {
     const turn = getTurn()
     const player = getPlayer()
     const turnIsPlayer = turn === player
@@ -21,3 +21,5 @@ export function updateMessage(winner, tie) {
         }
     }
 }
+
+export default updateMessage

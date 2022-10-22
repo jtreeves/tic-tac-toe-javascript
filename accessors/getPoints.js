@@ -1,6 +1,6 @@
-import { getValue } from './getValue.js'
+import getValue from './getValue.js'
 
-export function getPoints() {
+function getPoints() {
     const singleString = getValue('points')
     const arrayOfStrings = singleString.split(',')
     const arrayOfNumbers = arrayOfStrings.map(item => {
@@ -9,3 +9,5 @@ export function getPoints() {
 
     return arrayOfNumbers
 }
+
+export default getPoints

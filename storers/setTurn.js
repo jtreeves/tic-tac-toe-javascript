@@ -1,7 +1,9 @@
-import { setValue } from './setValue.js'
+import setValue from './setValue.js'
 
-export function setTurn(newTurn) {
+function setTurn(newTurn) {
     const stringTurn = String(newTurn)
-    
+
     setValue('turn', stringTurn)
 }
+
+export default setTurn

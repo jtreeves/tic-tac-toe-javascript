@@ -1,8 +1,10 @@
-import { getValue } from './getValue.js'
+import getValue from './getValue.js'
 
-export function getPlayer() {
+function getPlayer() {
     const singleString = getValue('player')
     const singleNumber = Number(singleString)
 
     return singleNumber
 }
+
+export default getPlayer

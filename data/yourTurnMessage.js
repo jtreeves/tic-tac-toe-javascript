@@ -1,1 +1,3 @@
-export const yourTurnMessage = 'Your turn!'
+const yourTurnMessage = 'Your turn!'
+
+export default yourTurnMessage
