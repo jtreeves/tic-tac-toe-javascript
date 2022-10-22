@@ -1,10 +1,10 @@
 import getValue from './getValue.js'
 
 function getTurn() {
-    const singleString = getValue('turn')
-    const singleNumber = Number(singleString)
+    const stringValue = getValue('turn')
+    const numberValue = Number(stringValue)
 
-    return singleNumber
+    return numberValue
 }
 
 export default getTurn

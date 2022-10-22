@@ -1,14 +1,28 @@
 import findEmptyIndexInNearlyFullCombo from './findEmptyIndexInNearlyFullCombo.js'
-import selectWinBlockOrRandomCell from './selectWinBlockOrRandomCell.js'
+import findCellByIndex from './findCellByIndex.js'
+import selectRandomEmptyCell from './selectRandomEmptyCell.js'
 
-function selectBestCell(computer) {
+function selectBestCell(opponent) {
     const xEmpty = findEmptyIndexInNearlyFullCombo('X')
     const oEmpty = findEmptyIndexInNearlyFullCombo('O')
 
-    if (computer === 'X') {
-        return selectWinBlockOrRandomCell(xEmpty, oEmpty)
+    let firstSide = 0
+    let secondSide = 0
+
+    if (opponent === 1) {
+        firstSide = xEmpty
+        secondSide = oEmpty
     } else {
-        return selectWinBlockOrRandomCell(oEmpty, xEmpty)
+        firstSide = oEmpty
+        secondSide = xEmpty
+    }
+
+    if (firstSide !== -1) {
+        return findCellByIndex(firstSide)
+    } else if (secondSide !== -1) {
+        return findCellByIndex(secondSide)
+    } else {
+        return selectRandomEmptyCell()
     }
 }
 

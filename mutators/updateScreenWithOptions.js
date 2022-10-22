@@ -8,7 +8,7 @@ function updateScreenWithOptions() {
 
     p.textContent = 'Which option do you want to play?'
     button.remove()
-    body.appendChild(article)
+    body.appendChild(article)   
 }
 
 export default updateScreenWithOptions

@@ -1,10 +1,10 @@
 import getValue from './getValue.js'
 
 function getPlayer() {
-    const singleString = getValue('player')
-    const singleNumber = Number(singleString)
+    const stringValue = getValue('player')
+    const numberValue = Number(stringValue)
 
-    return singleNumber
+    return numberValue
 }
 
 export default getPlayer
