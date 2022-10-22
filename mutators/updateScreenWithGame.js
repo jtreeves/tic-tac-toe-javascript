@@ -1,6 +1,7 @@
 import { getPlayer } from '../accessors/getPlayer.js'
 import { createBoard } from '../generators/createBoard.js'
 import { createResetButton } from '../generators/createResetButton.js'
+import { playOpponent } from '../utilities/playOpponent.js'
 
 export function updateScreenWithGame() {
     const body = document.querySelector('body')
@@ -15,4 +16,10 @@ export function updateScreenWithGame() {
     article.remove()
     body.appendChild(board)
     body.appendChild(resetButton)
+
+    if (player === -1) {
+        setTimeout(() => {
+            playOpponent()
+        }, 1000)
+    }
 }
