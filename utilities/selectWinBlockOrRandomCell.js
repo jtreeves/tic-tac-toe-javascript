@@ -1,7 +1,7 @@
 import findCellByIndex from './findCellByIndex.js'
 import selectRandomEmptyCell from './selectRandomEmptyCell.js'
 
-function selectWinBlockOrRandom(main, opponent) {
+function selectWinBlockOrRandomCell(main, opponent) {
     if (main !== -1) {
         return findCellByIndex(main)
     } else if (opponent !== -1) {
@@ -11,4 +11,4 @@ function selectWinBlockOrRandom(main, opponent) {
     }
 }
 
-export default selectWinBlockOrRandom
+export default selectWinBlockOrRandomCell

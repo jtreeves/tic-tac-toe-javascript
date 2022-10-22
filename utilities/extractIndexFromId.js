@@ -1,6 +1,6 @@
 function extractIndexFromId(id) {
-    const lastString = id.slice(-1)
-    const index = Number(lastString)
+    const lastCharacter = id.slice(-1)
+    const index = Number(lastCharacter)
 
     return index
 }
