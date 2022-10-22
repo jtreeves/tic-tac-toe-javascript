@@ -8,10 +8,6 @@ export function createInitialScreen() {
     const p = createMessage()
     const button = createStartButton()
 
-    while (body.firstChild) {
-        body.removeChild(body.firstChild)
-    }
-
     body.appendChild(h1)
     body.appendChild(p)
     body.appendChild(button)

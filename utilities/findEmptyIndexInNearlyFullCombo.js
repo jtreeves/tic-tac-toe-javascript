@@ -1,9 +1,9 @@
 import { getPoints } from '../accessors/getPoints.js'
 import { winningCombos } from '../data/winningCombos.js'
 
-export function findEmptyIndexInNearlyFullCombo(player) {
+export function findEmptyIndexInNearlyFullCombo(computer) {
     const points = getPoints()
-    const multiple = player === 'X' ? 1 : -1
+    const multiple = computer === 'X' ? 1 : -1
     let foundIndex = -1
 
     winningCombos.forEach(combo => {
