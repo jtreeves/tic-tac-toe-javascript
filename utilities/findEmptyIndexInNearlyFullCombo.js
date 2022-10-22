@@ -1,9 +1,8 @@
 import winningCombos from '../data/winningCombos.js'
 import getPoints from '../accessors/getPoints.js'
 
-function findEmptyIndexInNearlyFullCombo(side) {
+function findEmptyIndexInNearlyFullCombo(multiplier) {
     const points = getPoints()
-    const multiplier = side === 'X' ? 1 : -1
     let foundIndex = -1
 
     winningCombos.forEach(combo => {

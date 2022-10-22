@@ -3,8 +3,8 @@ import findCellByIndex from './findCellByIndex.js'
 import selectRandomEmptyCell from './selectRandomEmptyCell.js'
 
 function selectBestCell(opponent) {
-    const xEmpty = findEmptyIndexInNearlyFullCombo('X')
-    const oEmpty = findEmptyIndexInNearlyFullCombo('O')
+    const xEmpty = findEmptyIndexInNearlyFullCombo(1)
+    const oEmpty = findEmptyIndexInNearlyFullCombo(-1)
 
     let winningIndex = 0
     let blockingIndex = 0
