@@ -6,6 +6,7 @@ import { checkIfTie } from './checkIfTie.js'
 import { checkIfWinner } from './checkIfWinner.js'
 import { updateTurn } from '../mutators/updateTurn.js'
 import { updateMessage } from '../mutators/updateMessage.js'
+import { extractIndexFromId } from './extractIndexFromId.js'
 
 export function playOpponent() {
     const player = getPlayer()
