@@ -6,14 +6,15 @@ import { waitTurnMessage } from '../data/waitTurnMessage.js'
 export function updateMessage(winner, tie) {
     const turn = getTurn()
     const player = getPlayer()
+    const turnIsPlayer = turn === player
     const message = document.querySelector('p')
 
     if (winner) {
-        message.textContent = `${turn > 0 ? 'X' : 'O'} wins!`
+        message.textContent = turnIsPlayer ? 'You win!' : 'You lose!'
     } else if (tie) {
         message.textContent = 'Tie game!'
     } else {
-        if (player === turn) {
+        if (turnIsPlayer) {
             message.textContent = yourTurnMessage
         } else {
             message.textContent = waitTurnMessage
