@@ -13,19 +13,19 @@ import getTie from '../accessors/getTie.js'
 function playOpponent() {
     const winner = getWinner()
     const tie = getTie()
+    const player = getPlayer()
+    const points = getPoints()
 
     if (winner || tie) {
         return
     } else {
-        const player = getPlayer()
         const opponent = player * -1
         const computer = opponent === 1 ? 'X' : 'O'
         const cell = selectBestCell(computer)
-        cell.textContent = computer
         const id = cell.id
         const index = extractIndexFromId(id)
-        const points = getPoints()
         points[index] = opponent
+        cell.textContent = computer
         setPoints(points)
         updateTie()
         updateWinner()

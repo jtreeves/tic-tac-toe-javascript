@@ -13,13 +13,13 @@ function handleTurn(event) {
     const target = event.target
     const player = getPlayer()
     const turn = getTurn()
+    const points = getPoints()
 
     if (target.textContent !== '' || player !== turn) {
         return
     } else {
         const id = target.id
         const index = extractIndexFromId(id)
-        const points = getPoints()
         const text = turn === 1 ? 'X' : 'O'
         target.textContent = text
         points[index] = turn
