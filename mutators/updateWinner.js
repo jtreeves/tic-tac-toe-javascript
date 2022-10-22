@@ -1,5 +1,5 @@
-import getPoints from '../accessors/getPoints.js'
 import winningCombos from '../data/winningCombos.js'
+import getPoints from '../accessors/getPoints.js'
 import setWinner from '../storers/setWinner.js'
 
 function updateWinner() {

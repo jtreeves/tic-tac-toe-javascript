@@ -1,13 +1,9 @@
 import getPlayer from '../accessors/getPlayer.js'
-import selectBestCell from './selectBestCell.js'
-import updateTurn from '../mutators/updateTurn.js'
-import updateMessage from '../mutators/updateMessage.js'
-import extractIndexFromId from './extractIndexFromId.js'
-import updateTie from '../mutators/updateTie.js'
-import updateWinner from '../mutators/updateWinner.js'
 import getWinner from '../accessors/getWinner.js'
 import getTie from '../accessors/getTie.js'
-import updatePoints from '../mutators/updatePoints.js'
+import updateCurrentStates from '../mutators/updateCurrentStates.js'
+import extractIndexFromId from './extractIndexFromId.js'
+import selectBestCell from './selectBestCell.js'
 
 function playOpponent() {
     const winner = getWinner()
@@ -23,11 +19,7 @@ function playOpponent() {
         const id = cell.id
         const index = extractIndexFromId(id)
         cell.textContent = computer
-        updatePoints(index, opponent)
-        updateTie()
-        updateWinner()
-        updateTurn()
-        updateMessage()
+        updateCurrentStates(index, opponent)
     }
 }
 

@@ -1,8 +1,8 @@
-import getPlayer from '../accessors/getPlayer.js'
 import waitTurnMessage from '../data/waitTurnMessage.js'
 import yourTurnMessage from '../data/yourTurnMessage.js'
 import createBoard from '../generators/createBoard.js'
 import createResetButton from '../generators/createResetButton.js'
+import getPlayer from '../accessors/getPlayer.js'
 import playOpponent from '../utilities/playOpponent.js'
 
 function updateScreenWithGame() {
