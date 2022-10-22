@@ -28,6 +28,10 @@ export function handleTurn(event) {
         const winner = checkIfWinner()
         updateTurn(winner)
         updateMessage(winner, tie)
-        playOpponent()
+        if (!winner && !tie) {
+            setTimeout(() => {
+                playOpponent()
+            }, 1000)
+        }
     }
 }
