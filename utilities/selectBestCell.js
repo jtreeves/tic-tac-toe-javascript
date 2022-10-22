@@ -6,21 +6,21 @@ function selectBestCell(opponent) {
     const xEmpty = findEmptyIndexInNearlyFullCombo('X')
     const oEmpty = findEmptyIndexInNearlyFullCombo('O')
 
-    let firstSide = 0
-    let secondSide = 0
+    let winningIndex = 0
+    let blockingIndex = 0
 
     if (opponent === 1) {
-        firstSide = xEmpty
-        secondSide = oEmpty
+        winningIndex = xEmpty
+        blockingIndex = oEmpty
     } else {
-        firstSide = oEmpty
-        secondSide = xEmpty
+        winningIndex = oEmpty
+        blockingIndex = xEmpty
     }
 
-    if (firstSide !== -1) {
-        return findCellByIndex(firstSide)
-    } else if (secondSide !== -1) {
-        return findCellByIndex(secondSide)
+    if (winningIndex !== -1) {
+        return findCellByIndex(winningIndex)
+    } else if (blockingIndex !== -1) {
+        return findCellByIndex(blockingIndex)
     } else {
         return selectRandomEmptyCell()
     }
